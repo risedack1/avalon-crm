@@ -9,14 +9,13 @@
 
 // страницы
 
+// мини-компоненты
+@import "./components/mini/search-button";
+@import "./components/mini/account-mini";
+@import "./components/buttons/buttons";
+
 // подключения компонентов страницы
 @import "./components/header";
 @import "./components/footer";
-
-body {
-  background-color: #000;
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-
-  position: relative;
-}
+@import "./components/main-section";
+@import "./components/aside";

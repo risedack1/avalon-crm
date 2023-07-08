@@ -21,8 +21,9 @@ html {
   min-height: 100%;
   font-family: $font-family;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 1.2;
+  color: $color-black;
   background-color: $light-color;
 }
 
@@ -122,9 +123,16 @@ a {
 }
 
 .logo {
+  display: block;
+  width: 150px;
+  height: 50px;
 
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
 }
-
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

@@ -1,0 +1,7 @@
+.main-section {
+  &__container {
+    display: flex;
+
+    background-color: rgba($color-gray, 0.5);
+  }
+}

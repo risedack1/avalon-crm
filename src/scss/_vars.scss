@@ -8,7 +8,11 @@ $max-container: calc($max-content-width + ($container-offset * 2));
 
 // colors
 $light-color: #fff;
-$color-darkblack: #000;
+$color-gray: #eeeeee;
+$color-darkgray: #393e46;
+$color-black: #222831;
+$color-accent: #00adb5;
+$color-lightgray: #f2f2f2;
 
 // screen size
 $xsm: 370px;

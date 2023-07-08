@@ -1,12 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS Vite Template</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/js/main.js"></script>
-  </body>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <title>Avalon</title>
+</head>
+
+<body class="page__body">
+  <header class="header">
+    <div class="container header__container">
+      <a href="#" class="header__logo logo">
+        <img src="./src/img/logo.png" alt="logo" class="logo__img">
+      </a>
+      <button type="button" class="header__calendar-btn btn-reset" aria-label="открыть календарь">
+        <span class="header__calendar-date">
+          28-06-2023 13:06:43
+        </span>
+        <span class="header__calendar-icon">
+          <img src="./src/img/calendar-icon.svg" alt="иконка календаря">
+        </span>
+      </button>
+      <div class="header__right">
+        <div class="header__search search">
+          <button class="search__button btn-reset">
+            <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="Interface / Search_Magnifying_Glass">
+                <path id="Vector"
+                  d="M15 15L21 21M10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 13.866 13.866 17 10 17Z"
+                  stroke="#222831" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </g>
+            </svg>
+          </button>
+          <input type="text" class="search__input" placeholder="Поиск">
+        </div>
+        <div class="header__icons">
+          <button class="header__icon header__icon--message btn-reset">
+            <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 10H16.01M12 10H12.01M8 10H8.01M7 18.5V21L12 16H20V10M7 16H4V4H20V6" stroke="#222831"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <button class="header__icon header__icon--info btn-reset">
+            <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 18.5V21L12 16H20V10M7 16H4V4H20V6" stroke="#222831" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+          <button class="header__icon header__icon--note btn-reset">
+            <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15 17V18C15 18.394 14.9224 18.7841 14.7716 19.1481C14.6209 19.512 14.3999 19.8427 14.1213 20.1213C13.8427 20.3999 13.512 20.6209 13.1481 20.7716C12.7841 20.9224 12.394 21 12 21C11.606 21 11.2159 20.9224 10.8519 20.7716C10.488 20.6209 10.1573 20.3999 9.87868 20.1213C9.6001 19.8427 9.37913 19.512 9.22836 19.1481C9.0776 18.7841 9 18.394 9 18V17H20C20 17 18 12 18 9M15 3.82461C14.1129 3.30174 13.0861 3 12 3C8.732 3 6 5.732 6 9C6 13 4 17 4 17H6"
+                stroke="#222831" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <div class="header__account-mini account-mini btn-reset" role="button" tabindex="0">
+          <div class="account-mini__img">
+            <img src="./src/img/svg/account-img.svg" alt="account image">
+          </div>
+          <div class="account-mini__name">
+            admin
+          </div>
+          <div class="account-mini__menu">
+            <a href="#" class="account-mini__item account-mini__item--profile link-hover">
+              Профиль
+            </a>
+            <button type="button" class="account-mini__item account-mini__item--out btn-reset link-hover">
+              Выйти
+            </button>
+          </div>
+        </div>
+      </div>
+      <button class="header__burger burger-btn btn-reset">
+        <span class="burger-btn__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="main-section">
+      <div class="main-section__container container">
+        <button class="aside-btn-mobile btn-reset" aria-label="свернуть развернуть меню">
+          <span class="aside-btn-icon"></span>
+        </button>
+        <aside class="aside">
+          <button type="button" class="aside__swipe-btn btn-reset" aria-label="свернуть развернуть меню">
+            <span class="aside__btn-icon"></span>
+          </button>
+          <div class="aside__title">
+            Главная
+          </div>
+          <ul class="aside__list">
+            <li class="aside__item">
+              <button class="aside__button btn-reset">
+                <span class="aside__button-icon aside__icon">
+                  <img src="./src/img/svg/crm-icon.svg" alt="CRM">
+                </span>
+                CRM
+              </button>
+              <ul class="aside__sublist">
+                <li class="aside__subitem">
+                  <a href="#" class="aside__link">
+                    <span class="aside__link-icon aside__icon">
+                      <img src="./img/src/svg/crm-icon.svg" alt="CRM">
+                    </span>
+                    Новые лиды
+                  </a>
+                </li>
+                <li class="aside__subitem">
+                  <a href="#" class="aside__link">
+                    <span class="aside__link-icon aside__icon">
+                      <img src="./img/src/svg/crm-icon.svg" alt="CRM">
+                    </span>
+                    Лиды
+                  </a>
+                </li>
+                <li class="aside__subitem">
+                  <a href="#" class="aside__link">
+                    <span class="aside__link-icon aside__icon">
+                      <img src="./img/src/svg/crm-icon.svg" alt="CRM">
+                    </span>
+                    Торговые Аккаунты
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="aside__item">
+              <button class="aside__button btn-reset">
+                <span class="aside__button-icon aside__icon">
+                  <img src="./src/img/svg/reviews-icon.svg" alt="CRM">
+                </span>
+                Отчеты
+              </button>
+              <ul class="aside__sublist">
+                <li class="aside__subitem">
+                  <a href="#" class="aside__link">
+                    <span class="aside__link-icon aside__icon">
+                      <img src="./img/src/svg/crm-icon.svg" alt="CRM">
+                    </span>
+                    Conversion by GEO
+                  </a>
+                </li>
+                <li class="aside__subitem">
+                  <a href="#" class="aside__link">
+                    <span class="aside__link-icon aside__icon">
+                      <img src="./img/src/svg/crm-icon.svg" alt="CRM">
+                    </span>
+                    Conversion Flow
+                  </a>
+                </li>
+                <li class="aside__subitem">
+                  <a href="#" class="aside__link">
+                    <span class="aside__link-icon aside__icon">
+                      <img src="./src/img/svg/crm-icon.svg" alt="CRM">
+                    </span>
+                    Leads Distribution
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </aside>
+        <div class="start">start project</div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
 </html>

@@ -1,2 +1,3 @@
 import "../scss/style.scss";
-import "./components/slider";
+import "./components/aside";
+import "./components/burger-menu";
