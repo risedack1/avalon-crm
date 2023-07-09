@@ -1,0 +1,17 @@
+html,
+body {
+  scrollbar-color: rgba($color-darkgray, 0.3) $color-gray; /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-width: thin; /* толщина */
+}
+
+::-webkit-scrollbar {
+  background-color: $color-gray;
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba($color-darkgray, 0.3);
+  border-radius: 10px;
+  width: 10px;
+}

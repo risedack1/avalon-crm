@@ -31,6 +31,7 @@
     "vite-plugin-stylelint": "^4.3.0"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "tabulator-tables": "^5.5.0"
   }
 }

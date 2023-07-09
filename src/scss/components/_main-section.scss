@@ -1,7 +1,31 @@
 .main-section {
   &__container {
+    padding: 0;
     display: flex;
 
-    background-color: rgba($color-gray, 0.5);
+    background-color: #ebf0f0;
+    overflow: hidden;
+
+    @include w($md) {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__aside {
+    flex-shrink: 0;
+  }
+}
+
+.main-section__content {
+  width: calc(100% - 230px);
+  @include w($md) {
+    width: 100%;
+  }
+}
+
+.main-section__aside.hidden ~ .main-section__content {
+  width: calc(100% - 48px);
+  @include w($md) {
+    width: 100%;
   }
 }

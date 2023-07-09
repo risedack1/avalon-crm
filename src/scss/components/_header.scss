@@ -4,10 +4,11 @@
 
   &__container {
     padding: 7px 10px;
+    border-bottom: 2px solid $color-accent;
     display: flex;
     align-items: center;
 
-    background-color: $color-lightgray;
+    background-color: $light-color;
   }
 
   &__side-btn {

@@ -1,6 +1,6 @@
 // base
 $font-family: "Roboto", sans-serif;
-$content-width: 1170px;
+$content-width: 1900px;
 $max-content-width: 1700px;
 $container-offset: 15px;
 $container: calc($content-width + ($container-offset * 2));
@@ -9,9 +9,11 @@ $max-container: calc($max-content-width + ($container-offset * 2));
 // colors
 $light-color: #fff;
 $color-gray: #eeeeee;
+$color-border-gray: #ccc;
 $color-darkgray: #393e46;
 $color-black: #222831;
 $color-accent: #00adb5;
+$color-accent-bg: #ebf0f0;
 $color-lightgray: #f2f2f2;
 
 // screen size

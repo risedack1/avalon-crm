@@ -1,0 +1,13 @@
+.main-input {
+  padding: 5px 10px;
+  border: 2px solid $color-border-gray;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #555;
+  outline: transparent;
+}
+
+.main-input:focus {
+  border-color: $color-accent;
+  box-shadow: 0 0 0 0.2rem rgba($color-accent, 0.25);
+}

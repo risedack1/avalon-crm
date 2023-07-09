@@ -19,7 +19,7 @@
           28-06-2023 13:06:43
         </span>
         <span class="header__calendar-icon">
-          <img src="./src/img/calendar-icon.svg" alt="иконка календаря">
+          <img src="./src/img/svg/calendar-icon.svg" alt="иконка календаря">
         </span>
       </button>
       <div class="header__right">
@@ -40,12 +40,6 @@
             <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M16 10H16.01M12 10H12.01M8 10H8.01M7 18.5V21L12 16H20V10M7 16H4V4H20V6" stroke="#222831"
                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </button>
-          <button class="header__icon header__icon--info btn-reset">
-            <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 18.5V21L12 16H20V10M7 16H4V4H20V6" stroke="#222831" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
             </svg>
           </button>
           <button class="header__icon header__icon--note btn-reset">
@@ -85,7 +79,7 @@
         <button class="aside-btn-mobile btn-reset" aria-label="свернуть развернуть меню">
           <span class="aside-btn-icon"></span>
         </button>
-        <aside class="aside">
+        <aside class="aside main-section__aside">
           <button type="button" class="aside__swipe-btn btn-reset" aria-label="свернуть развернуть меню">
             <span class="aside__btn-icon"></span>
           </button>
@@ -104,7 +98,7 @@
                 <li class="aside__subitem">
                   <a href="#" class="aside__link">
                     <span class="aside__link-icon aside__icon">
-                      <img src="./img/src/svg/crm-icon.svg" alt="CRM">
+                      <img src="./src/img/svg/crm-icon.svg" alt="CRM">
                     </span>
                     Новые лиды
                   </a>
@@ -112,7 +106,7 @@
                 <li class="aside__subitem">
                   <a href="#" class="aside__link">
                     <span class="aside__link-icon aside__icon">
-                      <img src="./img/src/svg/crm-icon.svg" alt="CRM">
+                      <img src="./src/img/svg/crm-icon.svg" alt="CRM">
                     </span>
                     Лиды
                   </a>
@@ -120,7 +114,7 @@
                 <li class="aside__subitem">
                   <a href="#" class="aside__link">
                     <span class="aside__link-icon aside__icon">
-                      <img src="./img/src/svg/crm-icon.svg" alt="CRM">
+                      <img src="./src/img/svg/crm-icon.svg" alt="CRM">
                     </span>
                     Торговые Аккаунты
                   </a>
@@ -138,7 +132,7 @@
                 <li class="aside__subitem">
                   <a href="#" class="aside__link">
                     <span class="aside__link-icon aside__icon">
-                      <img src="./img/src/svg/crm-icon.svg" alt="CRM">
+                      <img src="./src/img/svg/crm-icon.svg" alt="CRM">
                     </span>
                     Conversion by GEO
                   </a>
@@ -146,7 +140,7 @@
                 <li class="aside__subitem">
                   <a href="#" class="aside__link">
                     <span class="aside__link-icon aside__icon">
-                      <img src="./img/src/svg/crm-icon.svg" alt="CRM">
+                      <img src="./src/img/svg/crm-icon.svg" alt="CRM">
                     </span>
                     Conversion Flow
                   </a>
@@ -163,7 +157,70 @@
             </li>
           </ul>
         </aside>
-        <div class="start">start project</div>
+        <section class="main-section__content content-section">
+          <div class="content-section__top section-top">
+            <h2 class="content-section__title">
+              Лиды
+            </h2>
+          </div>
+          <div class="inner-section">
+            <div class="inner-section__btn-group btn-group">
+              <button class="btn-reset btn-group__button main-button">
+                Фильтры
+              </button>
+              <button class="btn-reset btn-group__button main-button">
+                Назначить лида
+              </button>
+              <button class="btn-reset btn-group__button main-button">
+                Удалить лида
+              </button>
+            </div>
+            <div class="table-wrapper">
+              <div class="table-wrapper__top">
+                <div class="table-wrapper__top-left">
+                  <select name="rows-amount" class="num-select table-wrapper__select">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                  </select>
+                  <input class="main-input" name="text" placeholder="Поиск..." type="search">
+                </div>
+                <div class="table-wrapper__top-right">
+                  <div class="btn-group">
+                    <button class="btn-reset btn-group__button main-button">
+                      Копировать в буфер
+                    </button>
+                    <button class="btn-reset btn-group__button main-button">
+                      Отправить сигнал
+                    </button>
+                    <button class="btn-reset btn-group__button main-button">
+                      Export to Excel
+                    </button>
+                    <button class="btn-reset btn-group__button main-button">
+                      Видимость колонок
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="main-table-wrapper">
+                <div id="main-table"></div>
+              </div>
+              <div class="pagination-wrapper">
+                <div class="pagination">
+                  <a href="#" class="pagination__item">&laquo;</a>
+                  <a href="#" class="pagination__item active">1</a>
+                  <a href="#" class="pagination__item" class="active">2</a>
+                  <a href="#" class="pagination__item">3</a>
+                  <a href="#" class="pagination__item">4</a>
+                  <a href="#" class="pagination__item">5</a>
+                  <a href="#" class="pagination__item">...</a>
+                  <a href="#" class="pagination__item">10</a>
+                  <a href="#" class="pagination__item">&raquo;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </section>
   </main>

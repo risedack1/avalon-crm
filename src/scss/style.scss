@@ -12,6 +12,9 @@
 // мини-компоненты
 @import "./components/mini/search-button";
 @import "./components/mini/account-mini";
+@import "./components/mini/checkbox";
+@import "./components/mini/custom-input";
+@import "./components/mini/pagination";
 @import "./components/buttons/buttons";
 
 // подключения компонентов страницы
@@ -19,3 +22,10 @@
 @import "./components/footer";
 @import "./components/main-section";
 @import "./components/aside";
+@import "./components/content-section";
+@import "./components/section-top";
+@import "./components/inner-section";
+@import "./components/btn-group";
+@import "./components/table-wrapper";
+@import "./components/table";
+@import "./components/custom-scrollbar";
