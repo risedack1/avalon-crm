@@ -9,8 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
   <link rel="shortcut icon" href="./assets/favicon-7dd33470.png" type="image/x-icon">
   <title>Avalon</title>
-  <script type="module" crossorigin src="./assets/index-144bec95.js"></script>
-  <link rel="stylesheet" href="./assets/index-72afb82d.css">
+  <script type="module" crossorigin src="./assets/index-69130f8f.js"></script>
+  <link rel="stylesheet" href="./assets/index-9a715efe.css">
   <script type="module">import.meta.url;import("_").catch(()=>1);async function* g(){};if(location.protocol!="file:"){window.__vite_is_modern_browser=true}</script>
   <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
 </head>
@@ -64,9 +64,10 @@
             admin
           </div>
           <div class="account-mini__menu">
-            <a href="#" class="account-mini__item account-mini__item--profile link-hover">
+            <button class="btn-reset account-mini__item account-mini__item--profile link-hover"
+              data-graph-path="profile-settings">
               Профиль
-            </a>
+            </button>
             <button type="button" class="account-mini__item account-mini__item--out btn-reset link-hover">
               Выйти
             </button>
@@ -177,9 +178,6 @@
               <button class="btn-reset btn-group__button main-button">
                 Назначить лида
               </button>
-              <button class="btn-reset btn-group__button main-button">
-                Удалить лида
-              </button>
             </div>
             <div class="table-wrapper">
               <div class="table-wrapper__top">
@@ -193,12 +191,6 @@
                 </div>
                 <div class="table-wrapper__top-right">
                   <div class="btn-group">
-                    <button class="btn-reset btn-group__button main-button">
-                      Копировать в буфер
-                    </button>
-                    <button class="btn-reset btn-group__button main-button">
-                      Отправить сигнал
-                    </button>
                     <button class="btn-reset btn-group__button main-button">
                       Export to Excel
                     </button>
@@ -231,11 +223,228 @@
     </section>
   </main>
 
+  <div class="graph-modal">
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="profile-settings">
+      <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+      <div class="graph-modal__content profile-modal">
+        <div class="profile-modal__title">
+          Профиль
+        </div>
+        <form action="#" class="profile-modal__form">
+          <div class="profile-modal__top">
+            <div class="profile-modal__top-item">
+              <div class="profile-modal__top-row">
+                <div class="profile-modal__top-text">Звук</div>
+                <label class="toggle-switch profile-modal__top-switch">
+                  <input type="checkbox">
+                  <div class="toggle-switch-background">
+                    <div class="toggle-switch-handle"></div>
+                  </div>
+                </label>
+              </div>
+              <div class="profile-modal__top-row">
+                <div class="profile-modal__top-text">Показывать уведомления команды</div>
+                <label class="toggle-switch profile-modal__top-switch">
+                  <input type="checkbox">
+                  <div class="toggle-switch-background">
+                    <div class="toggle-switch-handle"></div>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="profile-modal__top-item">
+              <div class="profile-modal__top-row">
+                <div class="profile-modal__top-text">Язык</div>
+                <div class="container-radio">
+                  <label>
+                    <input type="radio" name="lang-radio" value="ru">
+                    <span>RU</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="lang-radio" value="en" checked="true">
+                    <span>EN</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-modal__table-wrapper">
+            <div class="profile-modal__table">
+              <div class="profile-modal__table-cell profile-modal__table-cell--header">
+                <div class="profile-modal__table-header">Название уведомления</div>
+              </div>
+              <div class="profile-modal__table-cell profile-modal__table-cell--header">
+                <div class="profile-modal__table-header">Колокольчик</div>
+              </div>
+
+              <div class="profile-modal__table-cell profile-modal__table-cell--header">
+                <div class="profile-modal__table-header">Всплывающие подсказки</div>
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-text">Дата следующего звонка</div>
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-checkbox">
+                  <input type="checkbox" class="ui-checkbox" name="call-time" value="bell">
+                </div>
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-checkbox">
+                  <input type="checkbox" class="ui-checkbox" name="call-time" value="tooltip">
+                </div>
+              </div>
+              
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-text">Назначение лидов</div>
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-checkbox">
+                  <input type="checkbox" class="ui-checkbox" name="lead-assignment" value="bell">
+                </div>
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-checkbox">
+                  <input type="checkbox" class="ui-checkbox" name="lead-assignment" value="tooltip">
+                </div>
+              </div>
+              
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-text">Новый депозит</div>
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-checkbox">
+                  <input type="checkbox" class="ui-checkbox" name="new-dep" value="bell">
+                </div>
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-checkbox">
+                  <input type="checkbox" class="ui-checkbox" name="new-dep" value="tooltip">
+                </div>
+              </div>
+              
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-text">Новый вывод средств</div>
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-checkbox">
+                  <input type="checkbox" class="ui-checkbox" name="cash-out" value="bell">
+                </div>
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-checkbox">
+                  <input type="checkbox" class="ui-checkbox" name="cash-out" value="tooltip">
+                </div>
+              </div>
+              
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-text">Новый бонус</div>
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-checkbox">
+                  <input type="checkbox" class="ui-checkbox" name="new-bonus" value="bell">
+                </div>
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-checkbox">
+                  <input type="checkbox" class="ui-checkbox" name="new-bonus" value="tooltip">
+                </div>
+              </div>
+              
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-text">Изменение статуса депозита</div>
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-checkbox">
+                  <input type="checkbox" class="ui-checkbox" name="change-dep-status" value="bell">
+                </div>
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-checkbox">
+                  <input type="checkbox" class="ui-checkbox" name="change-dep-status" value="tooltip">
+                </div>
+              </div>
+              
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-text">Новые сообщения от лида</div>
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-checkbox">
+                  <input type="checkbox" class="ui-checkbox" name="new-lead-message" value="bell">
+                </div>
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-checkbox">
+                  <input type="checkbox" class="ui-checkbox" name="new-lead-message" value="tooltip">
+                </div>
+              </div>
+              
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-text">Новые сообщения от лида</div>
+              </div>
+              <div class="profile-modal__table-cell">
+
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-checkbox">
+                  <input type="checkbox" class="ui-checkbox" name="new-lead-message" value="tooltip">
+                </div>
+              </div>
+              
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-text">Лиды онлайн</div>
+              </div>
+              <div class="profile-modal__table-cell">
+
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-checkbox">
+                  <input type="checkbox" class="ui-checkbox" name="online-lids" value="tooltip">
+                </div>
+              </div>
+              
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-text">Открытие платежки на платформе</div>
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-checkbox">
+                  <input type="checkbox" class="ui-checkbox" name="open-payment" value="bell">
+                </div>
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-checkbox">
+                  <input type="checkbox" class="ui-checkbox" name="open-payment" value="tooltip">
+                </div>
+              </div>
+              
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-text">Margin call</div>
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-checkbox">
+                  <input type="checkbox" class="ui-checkbox" name="margin-call" value="bell">
+                </div>
+              </div>
+              <div class="profile-modal__table-cell">
+                <div class="profile-modal__table-checkbox">
+                  <input type="checkbox" class="ui-checkbox" name="margin-call" value="tooltip">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="profile-modal__button-wrapper">
+            <button class="main-button btn-reset profile-modal__button" type="submit">Сохранить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
   
 
   <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
   <script nomodule crossorigin id="vite-legacy-polyfill" src="./assets/polyfills-legacy-191d86ec.js"></script>
-  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-8a9fb471.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-a55dcd0e.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
 </body>
 
 </html>
