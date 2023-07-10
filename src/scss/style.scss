@@ -3,11 +3,14 @@
 
 // базовые подключения
 // @import "fonts";
+
 @import "vars";
 @import "mixins";
 @import "settings";
 
-// страницы
+// modals
+@import "./components/modals/profile-modal";
+@import "./components/modals/modal";
 
 // мини-компоненты
 @import "./components/mini/search-button";
@@ -15,6 +18,8 @@
 @import "./components/mini/checkbox";
 @import "./components/mini/custom-input";
 @import "./components/mini/pagination";
+@import "./components/mini/switch";
+@import "./components/mini/radio-btns";
 @import "./components/buttons/buttons";
 
 // подключения компонентов страницы

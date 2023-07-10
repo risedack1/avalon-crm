@@ -1,0 +1,98 @@
+.profile-modal {
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 24px;
+  }
+  &__top {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    @include w($sm) {
+      flex-wrap: wrap-reverse;
+    }
+  }
+
+  &__top-item {
+    flex: 1 0 0;
+
+    @include w($sm) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__top-row {
+    padding: 10px 0;
+    border-bottom: 1px solid $color-border-gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  &__top-text {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  &__top-switch {
+    flex-shrink: 0;
+  }
+
+  &__select-group {
+    margin-bottom: 20px;
+  }
+
+  &__table-wrapper {
+    margin-bottom: 20px;
+    border-top: 1px solid $color-border-gray;
+    border-left: 1px solid $color-border-gray;
+    border-right: 1px solid $color-border-gray;
+
+    @include w($sm) {
+      overflow-x: auto;
+    }
+  }
+
+  &__table {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+
+    font-size: 14px;
+    color: $color-darkgray;
+
+    @include w($sm) {
+      width: 450px;
+    }
+  }
+
+  &__table-cell {
+    padding: 10px 0;
+    padding-left: 10px;
+    border-bottom: 1px solid $color-border-gray;
+    display: flex;
+    align-items: center;
+
+    &--header {
+      background-color: $color-lightgray;
+    }
+  }
+
+  &__table-header {
+    font-weight: 600;
+  }
+
+  &__table-text {
+    font-weight: 400;
+  }
+
+  &__table-checkbox {
+    height: 18px;
+  }
+
+  &__button-wrapper {
+    text-align: right;
+  }
+}
